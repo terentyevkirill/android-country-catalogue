@@ -5,7 +5,6 @@
     android:id="@+id/container_main_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="4dp"
     tools:context=".ui.MainActivity">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -22,6 +21,8 @@
             android:id="@+id/recyclerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

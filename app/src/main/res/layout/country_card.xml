@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="4dp"
-    app:cardCornerRadius="4dp"
+    app:cardCornerRadius="6dp"
     app:cardElevation="4dp"
     app:cardPreventCornerOverlap="false"
-    app:cardUseCompatPadding="false">
+    app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,126 +17,122 @@
             android:id="@+id/tv_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="2dp"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/tv_capital"
+            app:layout_constraintBottom_toTopOf="@+id/tv_capital_name"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/tv_capital"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintVertical_chainStyle="spread"
             tools:text="Ukraine" />
 
         <TextView
             android:id="@+id/tv_region"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp"
+            android:layout_marginStart="4dp"
             android:text="@string/region"
-            app:layout_constraintBottom_toTopOf="@+id/tv_population"
-            app:layout_constraintStart_toStartOf="@+id/tv_population"
-            app:layout_constraintTop_toBottomOf="@+id/tv_capital" />
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/tv_region_name" />
 
         <TextView
             android:id="@+id/tv_capital"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp"
+            android:layout_marginStart="4dp"
             android:text="@string/capital"
-            app:layout_constraintBottom_toTopOf="@+id/tv_region"
-            app:layout_constraintStart_toStartOf="@+id/tv_region"
-            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/tv_capital_name" />
 
         <TextView
             android:id="@+id/tv_population_num"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
+            android:layout_marginTop="2dp"
             android:layout_marginEnd="4dp"
+            android:layout_marginBottom="2dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_population"
+            app:layout_constraintBottom_toTopOf="@+id/tv_area_num"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_population"
-            app:layout_constraintTop_toTopOf="@+id/tv_population"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintTop_toBottomOf="@+id/tv_region_name"
             tools:text="42000000" />
 
         <TextView
             android:id="@+id/tv_population"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp"
+            android:layout_marginStart="4dp"
             android:text="@string/population"
-            app:layout_constraintBottom_toTopOf="@+id/tv_area"
-            app:layout_constraintStart_toStartOf="@+id/tv_area"
-            app:layout_constraintTop_toBottomOf="@+id/tv_region" />
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/tv_population_num" />
 
         <TextView
             android:id="@+id/tv_area_num"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
+            android:layout_marginTop="2dp"
             android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_area"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_area"
-            app:layout_constraintTop_toTopOf="@+id/tv_area"
-            app:layout_constraintVertical_bias="1.0"
-            tools:text="603700.0" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_population_num"
+            tools:text="653000" />
 
         <TextView
             android:id="@+id/tv_area"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="4dp"
             android:text="@string/area"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/tv_population" />
+            app:layout_constraintTop_toTopOf="@+id/tv_area_num" />
 
         <TextView
             android:id="@+id/tv_region_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
+            android:layout_marginTop="2dp"
             android:layout_marginEnd="4dp"
+            android:layout_marginBottom="2dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_region"
+            app:layout_constraintBottom_toTopOf="@+id/tv_population_num"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_region"
-            app:layout_constraintTop_toTopOf="@+id/tv_region"
-            app:layout_constraintVertical_bias="1.0"
-            tools:text="Eastern Europe" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_capital_name"
+            tools:text="Southern Europe" />
 
         <TextView
             android:id="@+id/tv_capital_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
+            android:layout_marginTop="2dp"
             android:layout_marginEnd="4dp"
+            android:layout_marginBottom="2dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_capital"
+            app:layout_constraintBottom_toTopOf="@+id/tv_region_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_capital"
-            app:layout_constraintTop_toTopOf="@+id/tv_capital"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"
             tools:text="Kiev" />
 
         <ImageView
             android:id="@+id/iv_flag"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="6dp"
             android:layout_marginBottom="16dp"
             android:background="@drawable/flag_border"
             android:backgroundTint="@color/colorFlagTint"
